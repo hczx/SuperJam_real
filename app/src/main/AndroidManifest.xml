@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".data.file.SaveDataToFileActivity"></activity>
+
+        <activity android:name=".data.sql.SQLiteActivity"></activity>
     </application>
 
 </manifest>

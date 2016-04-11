@@ -39,7 +39,7 @@ public abstract class MultiItemCommonAdapter<T> extends CommonAdapter<T> {
             return super.getView(position, convertView, parent);
         int layoutId = mMultiItemTypeSupport.getLayoutId(position, mDatas.get(position));
         ViewHolder viewHolder = ViewHolder.get(mContext, convertView, parent, layoutId, position);
-        conver(viewHolder, getItem(position));
+        conver(viewHolder, getItem(position),position);
         return viewHolder.getConvertView();
     }
 }
