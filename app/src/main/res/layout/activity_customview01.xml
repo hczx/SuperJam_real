@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<com.hc.android.superjam.customview.CustomView01-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--app:mtitleText="54515"-->
+    <!--app:mtitleTextColor="@color/colorAccent"-->
+    <!--app:mtitleTextSize="40sp" />-->
+
+    <com.hc.android.superjam.customview.CustomView02
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:imageScaleType="center"
+        app:mImage="@mipmap/ic_launcher"
+        app:mtitleText="sd"
+        app:mtitleTextColor="@color/colorAccent"
+        app:mtitleTextSize="40sp" />
+
+    <com.hc.android.superjam.customview.CustomView03
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:circleWidth="20dp"
+        app:firstColor="@color/colorAccent"
+        app:secondColor="@color/colorPrimary"
+        app:speed="10" />
+
+
+    <com.hc.android.superjam.customview.CustomVolumControlBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        app:bg="@mipmap/ic_launcher"
+        app:circleWidth="5dp"
+        app:dotCount="20"
+        app:firstColor="@color/colorAccent"
+        app:secondColor="@color/colorPrimary"
+        app:splitSize="15" />
+
+</RelativeLayout>

@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.hc.android.superjam.commonadapter.CommonRecyclerAdapter;
 import com.hc.android.superjam.commonadapter.RecyclerViewHolder;
+import com.hc.android.superjam.customview.CustomViewActivity;
 import com.hc.android.superjam.data.file.SaveDataToFileActivity;
 import com.hc.android.superjam.data.sql.SQLiteActivity;
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         mData.add(createFuncationModel(SaveDataToFileActivity.class, "保存数据到文件"));
         mData.add(createFuncationModel(SQLiteActivity.class, "数据库"));
+        mData.add(createFuncationModel(CustomViewActivity.class, "自定义控件"));
     }
 
 

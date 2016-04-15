@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="mtitleText" format="string|reference" />
+    <attr name="mtitleTextColor" format="color" />
+    <attr name="mtitleTextSize" format="dimension" />
+
+    <attr name="mImage" format="reference" />
+    <attr name="imageScaleType">
+        <enum name="fillXY" value="0" />
+        <enum name="center" value="1" />
+    </attr>
+
+    <declare-styleable name="CustomTitleView">
+        <attr name="mtitleText" />
+        <attr name="mtitleTextColor" />
+        <attr name="mtitleTextSize" />
+        <attr name="mImage" />
+        <attr name="imageScaleType" />
+    </declare-styleable>
+
+
+    <attr name="firstColor" format="color" />
+    <attr name="secondColor" format="color" />
+    <attr name="circleWidth" format="dimension" />
+    <attr name="speed" format="integer" />
+
+    <declare-styleable name="CustomViewCircle">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="speed" />
+    </declare-styleable>
+
+
+    <attr name="dotCount" format="integer" />
+    <attr name="splitSize" format="integer" />
+    <attr name="bg" format="reference" />
+
+    <declare-styleable name="CustomVolumControlBar">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="dotCount" />
+        <attr name="splitSize" />
+        <attr name="bg" />
+    </declare-styleable>
+    <!--<attr name="iceLeftDrawable" format=""-->
+
+</resources>

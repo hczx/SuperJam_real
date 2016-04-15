@@ -18,8 +18,6 @@ import com.hc.android.superjam.R;
 import com.hc.android.superjam.widget.LogUtil;
 import com.hc.android.superjam.widget.ScreenUtils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

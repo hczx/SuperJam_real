@@ -37,7 +37,7 @@ public class SQLiteActivity extends AppCompatActivity {
         updateDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                mHelper = new MySQLiteHelper(SQLiteActivity.this, MySQLiteHelper.DATABASE_NAME, null, 2);
             }
         });
 
@@ -53,16 +53,45 @@ public class SQLiteActivity extends AppCompatActivity {
                 values.put("price", 99.99);
                 values.put("pages", 850);
                 values.put("name", "机器码");
-                db.insert(MySQLiteHelper.TABLE_BOOK,null,values);
+                db.insert(MySQLiteHelper.TABLE_BOOK, null, values);
                 values.clear();
                 values.put("author", "Jam Li");
                 values.put("price", 5.30);
                 values.put("pages", 120);
                 values.put("name", "就付款时间");
-                db.insert(MySQLiteHelper.TABLE_BOOK,null,values);
+                db.insert(MySQLiteHelper.TABLE_BOOK, null, values);
 
                 //方法二
-                db.execSQL("");
+//                db.execSQL("insert into " + MySQLiteHelper.TABLE_BOOK + " (author,price,pages,name) values ('SuperJam',19.22,987,'I am jam')");
+            }
+        });
+
+
+        Button deleteBtn = (Button) this.findViewById(R.id.deleteBtn);
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db = mHelper.getWritableDatabase();
+                //方法一
+                db.delete(MySQLiteHelper.TABLE_BOOK, "pages = ?", new String[]{"500"});
+
+                //方法二
+                //db.execSQL("delete from " + MySQLiteHelper.TABLE_BOOK + " where pages = 500");
+            }
+        });
+
+        Button alterData = (Button) this.findViewById(R.id.alterBtn);
+        alterData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db = mHelper.getWritableDatabase();
+                //方法一
+                ContentValues values = new ContentValues();
+                values.put("price", 1999.21);
+                db.update(MySQLiteHelper.TABLE_BOOK, values, "name = ?", new String[]{"I am jam"});
+
+                //方法二
+               // db.execSQL("update "+MySQLiteHelper.TABLE_BOOK+" price = 199.21 where name = 'I am jam'");
             }
         });
     }

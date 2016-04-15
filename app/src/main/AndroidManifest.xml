@@ -3,11 +3,11 @@
     package="com.hc.android.superjam">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/motorcycle"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".MyApp"
         android:theme="@style/AppTheme.NoActionBar">
 
         <activity android:name=".MainActivity"></activity>
@@ -23,6 +23,8 @@
         <activity android:name=".data.file.SaveDataToFileActivity"></activity>
 
         <activity android:name=".data.sql.SQLiteActivity"></activity>
+
+        <activity android:name=".customview.CustomViewActivity"></activity>
     </application>
 
 </manifest>
