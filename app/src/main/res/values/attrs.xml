@@ -47,4 +47,19 @@
     </declare-styleable>
     <!--<attr name="iceLeftDrawable" format=""-->
 
+
+    <attr name="position">
+        <enum name="left_top" value="0" />
+        <enum name="right_top" value="1" />
+        <enum name="right_bottom" value="2" />
+        <enum name="left_bottom" value="3" />
+    </attr>
+
+    <attr name="radius" format="dimension"/>
+    <declare-styleable name="ArcMenu">
+        <attr name="position"/>
+        <attr name="radius"/>
+    </declare-styleable>
+
+
 </resources>
